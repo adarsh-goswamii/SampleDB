@@ -25,19 +25,19 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         String sql= "CREATE TABLE library (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, description TEXT, image_url TEXT);";
         sqLiteDatabase.execSQL(sql);
 
-        sql= "INSERT INTO library(name, description, image_url) values('name', 'desc', 'https://i.pinimg.com/564x/23/00/50/230050f9dc1bd5345cd1d8014bc5e23b.jpg');";
+        sql= "INSERT INTO library(name, description, image_url) values('Some Girls do', 'desc', 'https://i.pinimg.com/474x/99/07/60/99076041b7f56f9835cc57d60c75e4c8.jpg');";
         sqLiteDatabase.execSQL(sql);
 
-        sql= "INSERT INTO library(name, description, image_url) values('name', 'desc', 'https://i.pinimg.com/564x/23/00/50/230050f9dc1bd5345cd1d8014bc5e23b.jpg');";
+        sql= "INSERT INTO library(name, description, image_url) values('The upstairs room', 'desc', 'https://i.pinimg.com/474x/e9/1a/18/e91a1860d26a0c67708f8d35c38284ff.jpg');";
         sqLiteDatabase.execSQL(sql);
 
-        sql= "INSERT INTO library(name, description, image_url) values('name', 'desc', 'https://i.pinimg.com/564x/23/00/50/230050f9dc1bd5345cd1d8014bc5e23b.jpg');";
+        sql= "INSERT INTO library(name, description, image_url) values('Harry Potter', 'desc', 'https://i.pinimg.com/474x/bb/a0/1d/bba01d56f4c437def7a642e0ed390688.jpg');";
         sqLiteDatabase.execSQL(sql);
 
-        sql= "INSERT INTO library(name, description, image_url) values('name', 'desc', 'https://i.pinimg.com/564x/23/00/50/230050f9dc1bd5345cd1d8014bc5e23b.jpg');";
+        sql= "INSERT INTO library(name, description, image_url) values('xoxo', 'desc', 'https://i.pinimg.com/474x/27/ee/b0/27eeb066373894d6340fe670c96e3a92.jpg');";
         sqLiteDatabase.execSQL(sql);
 
-        sql= "INSERT INTO library(name, description, image_url) values('name', 'desc', 'https://i.pinimg.com/564x/23/00/50/230050f9dc1bd5345cd1d8014bc5e23b.jpg');";
+        sql= "INSERT INTO library(name, description, image_url) values('The girl in red', 'desc', 'https://i.pinimg.com/474x/8e/b9/63/8eb963b5794dd3f9aeb7cf19a59e659f.jpg');";
         sqLiteDatabase.execSQL(sql);
     }
 

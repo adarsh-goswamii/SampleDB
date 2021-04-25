@@ -5,6 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EAE8E8"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -20,6 +22,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
                 android:id="@+id/recyclerView"/>
 
         </RelativeLayout>

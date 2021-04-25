@@ -1,33 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="7dp"
-    app:cardCornerRadius="7dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:layout_height="wrap_content">
+    app:cardCornerRadius="7dp"
+    app:cardElevation="7dp">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/parent"
-        android:background="@color/colorPrimary"
-        android:padding="10dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="150dp"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
 
         <ImageView
             android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher"
-            android:id="@+id/img"/>
+            android:layout_height="40dp"
+            android:background="#70000000"
+            android:layout_marginTop="130dp"/>
 
         <TextView
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name"
-            android:id="@+id/name"
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/img"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="140dp"
+            android:text="Name"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
