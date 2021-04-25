@@ -22,6 +22,11 @@ import java.util.ArrayList;
 
 public class RecyclerBook extends RecyclerView.Adapter<RecyclerBook.ViewHolder>{
 
+    public interface DeleteBook {
+        void onDeleteBookResult(int bookId);
+    }
+
+    private DeleteBook deleteBook;
     private ArrayList<Book> arrayList;
     private Context context;
 
@@ -38,7 +43,7 @@ public class RecyclerBook extends RecyclerView.Adapter<RecyclerBook.ViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         Glide.with(context).asBitmap().load(arrayList.get(position).getImage_url()).into(holder.img);
         holder.name.setText(arrayList.get(position).getName());
 
@@ -60,7 +65,13 @@ public class RecyclerBook extends RecyclerView.Adapter<RecyclerBook.ViewHolder>{
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                // TODO: delete the book.
+                                try{
+                                    deleteBook= (DeleteBook) context;
+                                    deleteBook.onDeleteBookResult(arrayList.get(position).getId());
+                                }
+                                catch (ClassCastException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {

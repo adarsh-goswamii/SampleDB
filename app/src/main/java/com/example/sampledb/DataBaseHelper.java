@@ -39,6 +39,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         sql= "INSERT INTO library(name, description, image_url) values('The girl in red', 'desc', 'https://i.pinimg.com/474x/8e/b9/63/8eb963b5794dd3f9aeb7cf19a59e659f.jpg');";
         sqLiteDatabase.execSQL(sql);
+
+        sql= "INSERT INTO library(name, description, image_url) values('Like home', 'desc', 'https://i.pinimg.com/474x/9a/e5/52/9ae552dbb20cfbe257acb08a64d90c5c.jpg');";
+        sqLiteDatabase.execSQL(sql);
+
+        sql= "INSERT INTO library(name, description, image_url) values('Berta isla', 'desc', 'https://i.pinimg.com/474x/9c/64/1b/9c641b85aae15110581a79ee73895244.jpg');";
+        sqLiteDatabase.execSQL(sql);
     }
 
     @Override
